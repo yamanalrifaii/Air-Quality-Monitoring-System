@@ -1,0 +1,239 @@
+/* Container for the search bar and button */
+* {
+    margin:0; 
+    padding: 0; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.header {
+    min-height: 20vh; 
+    width: 100%; 
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+}
+
+nav {
+    display: flex; 
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+nav img {
+    width: 150px; 
+
+}
+
+.nav-links{
+    flex: 1; 
+    text-align: right;
+
+}
+
+.nav-links ul li {
+    list-style: none; /*no bullets */ 
+    display: inline-block; /*so it will come horizontally */ 
+    padding: 8px 12px;
+    position: relative; 
+    color:black; 
+}
+.nav-links ul li a {
+    color:white; 
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:black; 
+}
+
+.nav-links ul li::after { /*hover effect */ 
+    content: ''; /*to select the menu*/ 
+    width: 0%;  
+    height: 1px; 
+    background: rgb(0, 84, 180); 
+    display: block; /*the line */ 
+    margin: auto; 
+    transition: 0.5s; /*time to show the red line */ 
+}
+
+.nav-links ul li:hover::after {
+    width: 50%; 
+}
+
+
+#map {
+    margin-top: 50px;
+}
+#search-container {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+/* Styling for the search input field */
+#search-bar {
+    width: 300px; 
+    padding: 10px;
+    margin-right: 10px; 
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Styling for the search button */
+#search-btn {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 84, 180);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#search-btn:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+#download-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#city-input {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* for color bar */ 
+#aqi-color-bar {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Make sections stretch to the height of the tallest one */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.aqi-section {
+    flex: 1;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-right: 2px solid #fff;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+.aqi-section:last-child {
+    border-right: none; 
+}
+
+.aqi-section:nth-child(1) { background-color: #4CAF50; text-shadow: 1px 1px 2px #000; }
+.aqi-section:nth-child(2) { background-color: #FFEB3B; color: #000; text-shadow: 1px 1px 2px #fff; }
+.aqi-section:nth-child(3) { background-color: #FF9800; text-shadow: 1px 1px 2px #000; }
+.aqi-section:nth-child(4) { background-color: #F44336; text-shadow: 1px 1px 2px #000; }
+
+.pollution {
+    width: 80%; 
+    margin: auto; 
+    text-align: center; 
+    padding-top: 100px; 
+}
+
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#table th, #table td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 12px; /* Adjust the padding to add space */
+}
+
+#table th {
+    background-color: #f2f2f2;
+}
+
+/*  colors for each row */
+#table tr:nth-child(2) { /* Good */
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#table tr:nth-child(3) { /* Moderate */
+    background-color: #ffeb3b; /* Yellow */
+}
+
+#table tr:nth-child(4) { /* Unhealthy for Sensitive Groups */
+    background-color: #ff9800; /* Orange */
+    color: white;
+}
+
+#table tr:nth-child(5) { /* Unhealthy */
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+#table tr:nth-child(6) { /* Very Unhealthy */
+    background-color: rgb(131, 93, 93); /* Purple */
+    color: white;
+}
+
+#table tr:nth-child(7) { /* Hazardous */
+    background-color: #490d41; /* Purple */
+    color: white;
+}
+
+
+.pollution {
+    width: 80%; 
+    margin: auto; 
+    text-align: center; 
+    padding-top: 100px; 
+}
+
+
+
+.footer {
+    width: 100%; 
+    text-align: center; 
+    padding: 30px 0; 
+  
+  }
+  
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px; 
+    font-weight: 600;
+  }
+  
+.icons .fa{
+    color: green; 
+    margin: 3px 13px; 
+    cursor: pointer; 
+    padding: 18px 0' 
+  
+  }
+  
+.icons .fa{
+    color: black;
+    margin: 3px 13px;
+    cursor: pointer; 
+    padding: 18px 0; 
+  }
+  

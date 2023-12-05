@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header class="header"></header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality System - CFP Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!--for icons in smaller screens-->
+
+    <link rel="stylesheet" href="cfp.css"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <section class="header"> 
+        <nav> 
+            <a href="main.html"> <img src="AQS.png"> </a>
+            <div class="nav-links" id="navLinks">
+                <ul> 
+                    <li> <a href="main.html"> HOME </a></li>
+                    <li> <a href="map.html"> MAP </a></li>
+                    <li> <a href="compare.html"> COMPARE LOCATIONS </a></li>
+                    <li> <a href="cfp.html"> CFP </a></li>
+                    <li> <a href="login.html"> LOG IN </a></li>
+                </ul>
+            </div>
+        </nav> 
+    </section>
+    
+    <main>
+        <h1 style="text-align: center;">Transportation Carbon Footprint Calculator</h1>
+        <section id="calculator">
+            <form id="carbonForm">
+                
+                <label for="distance">Distance Travelled (miles):</label>
+                <input type="number" id="distance" name="distance" required>
+                
+                <label for="efficiency">Vehicle's Fuel Efficiency (kg CO2e/mile):</label>
+                <input type="number" id="efficiency" name="efficiency" step="0.1" required>
+                <label for="fuelType">Select Fuel Type:</label>
+                <select id="fuelType" name="fuelType" required>
+                    <option value="petrol">Petrol</option>
+                    <option value="electric">Electric</option>
+                    <option value="diesel">Diesel</option>
+                </select>
+                <input type="button"  value="Calculate My Carbon Footprint" onclick="calculateFootprint()">
+            </form>
+            <div id="result">
+                <p>CARBON FOOTPRINT = 500 MILES x 0.4 KG CO2E/MILE = 200 KG CO2E (OR 0.2 METRIC TONS CO2E)</p>
+            </div>
+        </section>
+       
+    </main>
+   
+   
+    <section class="footer">
+        <h4> About us</h4>
+        <p> AQMS was developed by a group of students of UOS. </p>
+        <div class="icons"> 
+            <i class="fa fa-facebook"> </i>
+            <i class="fa fa-twitter"> </i>
+            <i class="fa fa-instagram"> </i>
+            <i class="fa fa-linkedin"> </i>
+        </div>
+        
+      </section>
+
+      <script src="cfp.js"></script>
+</body>
+</html>
+</header>

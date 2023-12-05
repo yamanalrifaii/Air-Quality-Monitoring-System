@@ -1,0 +1,184 @@
+* {
+  font-family: 'Montserrat', sans-serif; 
+}
+
+
+.header {
+  min-height: 20vh; 
+  width: 100%; 
+  background-position: center;
+  background-size: cover;
+  position: relative; 
+}
+
+nav {
+  display: flex; 
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+nav img {
+  width: 150px; 
+
+}
+
+.nav-links{
+  flex: 1; 
+  text-align: right;
+
+}
+
+.nav-links ul li {
+  list-style: none; /*no bullets */ 
+  display: inline-block; /*so it will come horizontally */ 
+  padding: 8px 12px;
+  position: relative; 
+  color:black; 
+}
+.nav-links ul li a {
+  color:white; 
+  text-decoration: none;
+  font-size: 13px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:black; 
+}
+
+.nav-links ul li::after { /*hover effect */ 
+  content: ''; /*to select the menu*/ 
+  width: 0%;  
+  height: 1px; 
+  background: rgb(0, 84, 180); 
+  display: block; /*the line */ 
+  margin: auto; 
+  transition: 0.5s; /*time to show the red line */ 
+}
+
+.nav-links ul li:hover::after {
+  width: 50%; 
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .branding {
+    color: #31241E;
+    font-weight: bold;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    line-height: 1.2;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1em;
+    padding-left: 100px;
+  }
+  
+  .navbar a, .navbar a:visited, .navbar a.bold {
+    text-decoration: none;
+    color: rgb(0, 84, 180);
+    padding: 0.5em;
+    font-weight: normal;
+  }
+  
+  .navbar a.bold {
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+  }
+  
+  .search-bar input {
+    padding: 0.5em;
+    margin-right: 0.5em;
+  }
+  
+  .search-bar button {
+    background-color: rgb(0, 84, 180);
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+  }
+  
+  #map {
+    width: 100%;
+    height: 450px;
+    background-color: #e9e9e9;
+  }
+  
+  .map-container {
+    text-align: center;
+  }
+  
+
+.result-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.city-result {
+    flex-basis: 48%; /* Adjust as needed based on your design */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.city-result p {
+    margin: 0;
+    font-size: 16px;
+    color: rgb(0, 84, 180);
+}
+
+.city-result .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 84, 180); /* Adjust the color based on your preference */
+}
+
+
+.footer {
+  width: 100%; 
+  text-align: center; 
+  padding: 30px 0; 
+
+}
+
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px; 
+  font-weight: 600;
+}
+
+.icons .fa{
+  color: green; 
+  margin: 3px 13px; 
+  cursor: pointer; 
+  padding: 18px 0' 
+
+}
+
+.icons .fa{
+  color: black;
+  margin: 3px 13px;
+  cursor: pointer; 
+  padding: 18px 0; 
+}

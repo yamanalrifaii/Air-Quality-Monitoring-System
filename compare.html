@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <title>Air Quality System</title>
+  <link rel="stylesheet" href="compare.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!--for icons in smaller screens-->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Your existing styles */
+    
+  
+        #map { height: 500px; }
+        .button {
+            padding: 5px;
+            margin: 5px;
+            background-color: #fffbfb;
+            cursor: pointer;
+        }
+        .button.primary {
+            background-color: #add8e6;
+        }
+  
+
+    .result-container {
+      display: flex;
+      justify-content: space-between; /* Adjusted to space between the two city results */
+      margin-top: 20px;
+    }
+    .city-result {
+      text-align: center;
+      width: 48%; /* Adjusted width to allow space for both cities */
+    }
+  </style>
+</head>
+<body>
+
+  <section class="header"> 
+    <nav> 
+        <a href="main.html"> <img src="AQS.png"> </a>
+        <div class="nav-links" id="navLinks">
+            <ul> 
+              <li> <a href="main.html"> HOME </a></li>
+                    <li> <a href="map.html"> MAP </a></li>
+                    <li> <a href="compare.html"> COMPARE LOCATIONS  </a></li>
+                    <li> <a href="cfp.html"> CFP </a></li>
+                    <li> <a href="login.html"> LOG IN </a></li>
+            </ul>
+        </div>
+    </nav> 
+</section>
+
+  <h1 style="text-align: center;"> Compare Between Different Locations </h1>
+
+  <div id="map"></div>
+
+  <div class="search-bar">
+    <input type="text" id="firstCity" placeholder="Enter first city">
+    <input type="text" id="secondCity" placeholder="Enter second city">
+    <button type="button" onclick="compareCities()"> compare </button>
+  </div>
+
+
+  <div class="search-bar">
+    <input type="text"  id="searchInput" hidden>
+    <button id="search-btn" hidden></button>
+   
+  </div>
+
+      
+
+  <div class="result-container" id="resultContainer"> 
+    <div class="city-result" id="firstCityResult" hidden>
+        <p class="title" id="firstCityText"></p>
+        <p id="firstCityInfo"></p>
+    </div>
+    <div class="city-result" id="secondCityResult" hidden>
+        <p class="title" id="secondCityText"></p>
+        <p id="secondCityInfo"></p>
+    </div>
+</div>
+
+
+<section class="footer">
+  <h4> About us</h4>
+  <p> AQMS was developed by a group of students of UOS. </p>
+  <div class="icons"> 
+      <i class="fa fa-facebook"> </i>
+      <i class="fa fa-twitter"> </i>
+      <i class="fa fa-instagram"> </i>
+      <i class="fa fa-linkedin"> </i>
+  </div>
+  
+</section>
+
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="compare.js"></script>
+</body>
+</html><!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <title>Air Quality System</title>
+  <link rel="stylesheet" href="compare.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!--for icons in smaller screens
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Your existing styles */
+    
+  
+        #map { height: 500px; }
+        .button {
+            padding: 5px;
+            margin: 5px;
+            background-color: #fffbfb;
+            cursor: pointer;
+        }
+        .button.primary {
+            background-color: #add8e6;
+        }
+  
+
+    .result-container {
+      display: flex;
+      justify-content: space-between; /* Adjusted to space between the two city results */
+      margin-top: 20px;
+    }
+    .city-result {
+      text-align: center;
+      width: 48%; /* Adjusted width to allow space for both cities */
+    }
+  </style>
+</head>
+<body>
+
+  <section class="header"> 
+    <nav> 
+        <a href="main.html"> <img src="AQS.png"> </a>
+        <div class="nav-links" id="navLinks">
+            <ul> 
+                <li> <a href="main.html"> HOME </a></li>
+                <li> <a href="map.html"> MAP </a></li>
+                <li> <a href="compare.html"> COMPARE LOCATIONS </a></li>
+                <li> <a href="login.html"> LOG IN </a></li>
+            </ul>
+        </div>
+    </nav> 
+</section>
+
+  <h1 style="text-align: center;"> Compare Between Different Locations </h1>
+
+  <div id="map"></div>
+
+  <div class="search-bar">
+    <input type="text" id="firstCity" placeholder="Enter first city">
+    <input type="text" id="secondCity" placeholder="Enter second city">
+    <button type="button" onclick="compareCities()"> compare </button>
+  </div>
+
+
+  <div class="search-bar">
+    <input type="text"  id="searchInput" hidden>
+    <button id="search-btn" hidden></button>
+   
+  </div>
+
+      
+
+  <div class="result-container" id="resultContainer"> 
+    <div class="city-result" id="firstCityResult" hidden>
+        <p class="title" id="firstCityText"></p>
+        <p id="firstCityInfo"></p>
+    </div>
+    <div class="city-result" id="secondCityResult" hidden>
+        <p class="title" id="secondCityText"></p>
+        <p id="secondCityInfo"></p>
+    </div>
+</div>
+
+
+<section class="footer">
+  <h4> About us</h4>
+  <p> AQMS was developed by a group of students of UOS. </p>
+  <div class="icons"> 
+      <i class="fa fa-facebook"> </i>
+      <i class="fa fa-twitter"> </i>
+      <i class="fa fa-instagram"> </i>
+      <i class="fa fa-linkedin"> </i>
+  </div>
+  
+</section>
+
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="compare.js"></script>
+</body>
+</html> --> 

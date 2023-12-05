@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+       <meta name="viewport" content="with=device-width, initial-scale=1.0"> 
+       <title> Air Quality Monitoring System </title>
+       <link rel="stylesheet" href="main.css"> 
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!--for icons in smaller screens-->
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body> 
+
+   
+   <section class="header"> 
+       <nav> 
+           <a href="main.html"> <img src="AQS.png"> </a>
+           <div class="nav-links" id="navLinks">
+               <ul> 
+                   <li> <a href="main.html"> HOME </a></li>
+                   <li> <a href="map.html"> MAP </a></li>
+                   <li> <a href="compare.html"> COMPARE LOCATIONS </a></li>
+                   <li> <a href="cfp.html"> CFP </a></li>
+                   <li> <a href="login.html"> LOG IN </a></li>
+               </ul>
+           </div>
+       </nav> 
+
+       <div class="textBox" style="background-color: rgb(0, 84, 180)"; padding: 20px; text-align: center; color: white; padding-top: 0%;">
+           <h1 style="padding-top: 10%; color:white "> Air Quality Monitoring System </h1>
+           <p style="color: white;">Empower healthier skies and cleaner living.</p>
+           <a href="map.html" class="link2" style="color: white;">View World Map</a>
+       </div>
+       
+
+
+   </section>
+
+
+   <div class="about" id="ABOUT">
+       <div class="mainn">
+           <div class="imgg">
+               <img src="airquality.jpeg">
+           </div>
+
+           <div class="textt"> 
+               <h3>Why is monitoring air quality important?</h3>
+               <p>
+Monitoring air quality is vital for safeguarding public health and the environment. By tracking pollutant levels, we gain insights into potential health risks, allowing for timely interventions and informed decision-making. This proactive approach fosters healthier living conditions and aids in the development of effective pollution control measures.
+               </p>
+           </div>
+       </div>
+   </div> 
+
+
+
+<section class="features"> 
+   <h1> Features of AQMS </h1>
+   <p> The main features of the system are as follows </p>
+
+   <div class="row"> 
+       <div class="featuresCol">
+           <h3> Real Time Monitoring </h3>
+           <p> Real time reporting of Air Quality Index, pollutant measurements such as O3, PM2.5, PM10. </p>
+       </div>
+
+       <div class="featuresCol">
+           <h3> Forecasting </h3>
+           <p> Predicting air quality indeces and pollutants. </p>
+       </div>
+
+       <div class="featuresCol">
+           <h3> Comparing different locations </h3>
+           <p> Compare different cities and their AQI's. </p>
+       </div>
+   
+   </div>
+</section>
+
+<!---facilities-->
+
+<section class="analysis">
+   <h1> Pollutants analysis </h1>
+
+   <p> Pollutants degrade air quality by introducing harmful substances into the atmosphere, leading to adverse health effects, environmental damage, and overall degradation of living conditions. </p>
+
+   <div class="row"> 
+       <div class="analysisCol"> 
+           <img src="aqi1.png"> 
+           <h3 style="text-align: center;"> AQI </h3>
+           <p style="text-align: center;"> AQI provides a comprehensive index reflecting overall air quality and associated health risks.</p>
+       </div>
+
+       <div class="analysisCol"> 
+           <img src="PM10.png"> 
+           <h3  style="text-align: center;"> PM10 </h3>
+           <p style="text-align: center;"> PM10 assesses larger inhalable particles. </p>
+       </div>
+
+       <div class="analysisCol"> 
+           <img src="PM2.5.png"> 
+           <h3  style="text-align: center;"> PM2.5 </h3>
+           <p style="text-align: center;"> PM2.5 measures fine inhalable particles. </p>
+       </div>
+
+   </div>
+</section>
+
+<!--call to action-->
+
+<section class="cta">
+   <h1> Check air quality <br> anywhere from the world</h1>
+   <a href="map.html" class="link1"> Check AQI </a>
+
+</section>
+
+<!--footer-->
+
+<section class="footer">
+   <h4> About us</h4>
+   <p> AQMS was developed by a group of students of UOS. </p>
+   <div class="icons"> 
+       <i class="fa fa-facebook"> </i>
+       <i class="fa fa-twitter"> </i>
+       <i class="fa fa-instagram"> </i>
+       <i class="fa fa-linkedin"> </i>
+   </div>
+   
+</section>
+
+
+<!-------Javascript for Toggle Menu------> 
+
+<script>
+   var navLinks = document.getElementById("navLinks"); 
+   function showMenu(){
+       navLinks.style.right = "0"; 
+   }
+
+   function hideMenu(){
+       navLinks.style.right = "-200px"; 
+   }
+
+
+</script>
+
+
+</body>  
+</html>
+ 
+ 
+ <!-- <!DOCTYPE html>
+ <html> 
+<head> 
+        <meta name="viewport" content="with=device-width, initial-scale=1.0"> 
+        <title> Air Quality Monitoring System </title>
+        <link rel="stylesheet" href="main.css"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!--for icons in smaller screens
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body> 
+    
+    <section class="header"> 
+        <nav> 
+            <a href="main.html"> <img src="AQS.png"> </a>
+            <div class="nav-links" id="navLinks">
+                <ul> 
+                    <li> <a href="main.html"> HOME </a></li>
+                    <li> <a href="map.html"> MAP </a></li>
+                    <li> <a href="compare.html"> COMPARE LOCATIONS </a></li>
+                    <li> <a href="login.html"> LOG IN </a></li>
+                </ul>
+            </div>
+        </nav> 
+
+        <div class="textBox" style="background-color: rgb(0, 84, 180)"; padding: 20px; text-align: center; color: white; padding-top: 0%;">
+            <h1 style="padding-top: 10%; color:white "> Air Quality Monitoring System </h1>
+            <p style="color: white;">Empower healthier skies and cleaner living.</p>
+            <a href="map.html" class="link2" style="color: white;">View World Map</a>
+        </div>
+
+    </section>
+
+    <div class="about" id="ABOUT">
+        <div class="mainn">
+            <div class="imgg">
+                <img src="airquality.jpeg">
+            </div>
+
+            <div class="textt"> 
+                <h3>Why is monitoring air quality important?</h3>
+                <p>
+Monitoring air quality is vital for safeguarding public health and the environment. By tracking pollutant levels, we gain insights into potential health risks, allowing for timely interventions and informed decision-making. This proactive approach fosters healthier living conditions and aids in the development of effective pollution control measures.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+<section class="features"> 
+    <h1> Features of AQMS </h1>
+    <p> The main features of the system are as follows </p>
+
+    <div class="row"> 
+        <div class="featuresCol">
+            <h3> Real Time Monitoring </h3>
+            <p> Real time reporting of Air Quality Index, pollutant measurements such as O3, PM2.5, PM10. </p>
+        </div>
+
+        <div class="featuresCol">
+            <h3> Forecasting </h3>
+            <p> Predicting air quality indeces and pollutants. </p>
+        </div>
+
+        <div class="featuresCol">
+            <h3> Comparing different locations </h3>
+            <p> Compare different cities and their AQI's. </p>
+        </div>
+    
+    </div>
+</section>
+
+<!---facilities
+
+<section class="analysis">
+    <h1> Pollutants analysis </h1>
+
+    <p> Pollutants degrade air quality by introducing harmful substances into the atmosphere, leading to adverse health effects, environmental damage, and overall degradation of living conditions. </p>
+
+    <div class="row"> 
+        <div class="analysisCol"> 
+            <img src="aqi1.png"> 
+            <h3 style="text-align: center;"> AQI </h3>
+            <p style="text-align: center;"> AQI provides a comprehensive index reflecting overall air quality and associated health risks.</p>
+        </div>
+
+        <div class="analysisCol"> 
+            <img src="PM10.png"> 
+            <h3  style="text-align: center;"> PM10 </h3>
+            <p style="text-align: center;"> PM10 assesses larger inhalable particles. </p>
+        </div>
+
+        <div class="analysisCol"> 
+            <img src="PM2.5.png"> 
+            <h3  style="text-align: center;"> PM2.5 </h3>
+            <p style="text-align: center;"> PM2.5 measures fine inhalable particles. </p>
+        </div>
+
+    </div>
+</section>
+
+<!--call to action
+<section class="cta">
+    <h1> Check air quality <br> anywhere from the world</h1>
+    <a href="map.html" class="link1"> Check AQI </a>
+
+</section>
+
+<!--footer
+
+<section class="footer">
+    <h4> About us</h4>
+    <p> AQMS was developed by a group of students of UOS. </p>
+    <div class="icons"> 
+        <i class="fa fa-facebook"> </i>
+        <i class="fa fa-twitter"> </i>
+        <i class="fa fa-instagram"> </i>
+        <i class="fa fa-linkedin"> </i>
+    </div>
+    
+</section>
+
+
+<!-------Javascript for Toggle Menu-
+
+<script>
+    var navLinks = document.getElementById("navLinks"); 
+    function showMenu(){
+        navLinks.style.right = "0"; 
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px"; 
+    }
+
+
+</script>
+
+
+</body>  
+ </html>
+
+--> 
